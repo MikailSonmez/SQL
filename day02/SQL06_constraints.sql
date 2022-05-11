@@ -64,6 +64,7 @@ drop table adresler;
   
 ==============================================================================*/ 
 
+use sys;
 CREATE TABLE talebeler
     (
         id CHAR(3) primary key,  
@@ -107,7 +108,6 @@ drop table talebeler;
 select * from talebeler;
 select * from notlar;
 
-
-
-DELETE FROM talebeler WHERE id = 124;
+DELETE FROM talebeler WHERE id = '124';
+DELETE FROM notlar where talebe_id='123';-- child
 
