@@ -91,7 +91,7 @@ order by sum(urun_miktari) desc;
 select urun_adi, max(urun_miktari) as maxT
 from  manav
 group by urun_adi
-having max(urun_miktari) != min(urun_miktari)  -- != yerine <> kullanilabilir
+having maxT!= min(urun_miktari)  -- != yerine <> kullanilabilir
 order by maxT;
 -- siralam: group by, having, order by
 

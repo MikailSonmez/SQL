@@ -28,4 +28,4 @@ select ad, soyad, concat(left(ad,1) ,'.', left(soyad,1),'.') as kisa_isim from c
 -- soru:  5 ve 5 karakterden büyük olan isimleri MORIS -> MRS şeklinde yazdırınız.
 -- yani 1. , 3. ve 5. karakterleri alınız
 
-select left(ad,1), right((left(ad,3)),1), right((left(ad,5)),1) from customer;
+select ad, concat(left(ad,1), right((left(ad,3)),1), right((left(ad,5)),1)) from customer where length(ad)>5;
